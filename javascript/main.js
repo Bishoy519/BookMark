@@ -13,17 +13,21 @@ if (localStorage.getItem('bookData') !== null) {
 
 
 function addData() {
+    if(valid() == true){
     var wholeData = {
         bookName: input1.value,
         urlName: input2.value,
     };
 
     
-    valid()
+    // valid()
     data.push(wholeData);
     clear();
     displayData();
     localStor();
+}else{
+    console.log("no add");
+}
 }
 
 function localStor() {
@@ -64,13 +68,14 @@ function valid(){
         secondInput: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)/
     }
     if(regex.firstInput.test(input1.value) && regex.secondInput.test(input2.value)){
-        return true;
+        element.classList.remove("d-block");
+        element.classList.add("d-none");
+        return true
         }else{
             element.classList.remove("d-none");
-            setTimeout(function(){
-                element.classList.add("d-none");
-                }, 3000);
-
+            element.classList.add("d-block");
+            return false
+            
 }
 }
 
