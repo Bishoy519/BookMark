@@ -1,0 +1,46 @@
+body{
+    background-color:#F7EBDD;
+    position: relative;
+}
+h1{
+    color: rgb(53, 46, 40) ;
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-size: 3.1rem;
+}
+
+h1::after{
+content: "";
+width: 100%;
+position: absolute;
+background-color: #FEC160;
+height: 20%;
+bottom: 8%;
+left: 0%;
+z-index: -1;
+transition: all 0.4s;
+}
+
+h1:hover::after{
+    height: 50%;
+}
+
+h2{
+    background: linear-gradient(to right, #3EA55A,#B1AB49);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: "Righteous", sans-serif;
+}
+
+#notes{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+}
+
+
+/* font-family: "Pacifico", cursive;     */
+

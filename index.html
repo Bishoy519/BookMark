@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./Css/all.min.css">
+  <link rel="stylesheet" href="./Css/bootstrap.min.css">
+  <link rel="stylesheet" href="./Css/main.css">
+  <link rel="stylesheet" href="./Css/media.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center align-items-center flex-column mt-5">
+        <h1 class="position-relative">Bookmarker</h1>
+        <hr class="w-100">
+        <h2><i class="fa-solid fa-bookmark me"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+        <label for="" class="d-flex align-self-start d-flex justify-content-between align-items-center"><i class="fa-solid fa-book-bookmark me-1 my-0"></i>Site Name </label>
+        <input type="text" class="w-100" id="firstInput" placeholder="Google">
+        <label for="" class="d-flex align-self-start d-flex justify-content-between align-items-center"><i class="fa-solid fa-link"></i>Site Name </label>
+        <input type="text" class="w-100" id="secondInput" placeholder="https://www.google.com/">
+        <button class="btn btn-outline-danger mt-5" onclick="addData()">Submit</button>
+      </div>
+    </div>
+    <hr>
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead class="m-auto">
+          <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Website Name</th>
+            <th scope="col">Visit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="placeHolder">
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert alert-warning alert-dismissible fade show d-none" id="notes" role="alert">
+      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    
+    <script src="./javascript/main.js"></script>
+    <script src="./javascript/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
