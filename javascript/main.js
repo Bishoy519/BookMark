@@ -54,7 +54,7 @@ function displayData() {
 }
 
 function visi(index) {
-    window.open(data[index].urlName, "_blank");
+    data[index].urlName.includes("https://") ? window.open(data[index].urlName, "_blank") : window.open(`https://${data[index].urlName}`, "_blank");
 }
 function deleteData(index) {
     data.splice(index, 1);
@@ -65,7 +65,7 @@ function deleteData(index) {
 function valid(){
     var regex = {
         firstInput: /^[a-z0-9_-]{3,15}$/,
-        secondInput: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)/
+        secondInput: /(https:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)/
     }
     if(regex.firstInput.test(input1.value) && regex.secondInput.test(input2.value)){
         element.classList.remove("d-block");
